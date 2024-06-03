@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricelist</title>
+    
+    <link rel="icon" href="path/to/your/icon.png">
+</head>
+<body>
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b8f7f7;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.plan {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.most-popular::before {
+    content: 'Most Popular';
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.biranaav {
+    font-size: 2em;
+    margin: 20px 0;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: darkgreen;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    color:white;
+    border-radius: 50%; }
+li::after {
+    content: ':heavy_tick:';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 1;
+    pointer-events: none;}
+  
+    </style>
+    <header>
+        <h1>Choose the plan that fits for your team</h1>
+        <p>Deploy your sites to global infrastructure in seconds. No credit card required</p>
+    </header>
+    <section class="pricing-container">
+        <div class="plan">
+            <h2>Dev</h2>
+            <p class="price">FREE</p>
+            <ul>
+                <li>Unlimited Websites</li>
+                <li>1 User</li>
+                <li>100MB Space/website</li>
+                <li>Continuous deployment</li>
+                <li>No priority support</li>
+            </ul>
+            <button class="signup">Signup</button>
+        </div>
+        <div class="plan most-popular">
+            <h2>Pro</h2>
+            <p class="price">Rs.1000/month</p>
+            <ul>
+                <li>Unlimited Websites</li>
+                <li>5 Users</li>
+                <li>512MB Space/website</li>
+                <li>Continuous deployment</li>
+                <li>Email Support</li>
+            </ul>
+            <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="plan">
+            <h2>Enterprise</h2>
+            <p class="biranaav">Custom Pricing</p>
+            <ul>
+                <li>Unlimited Websites</li>
+                <li>Unlimited Users</li>
+                <li>Unlimited Space/website</li>
+                <li>Continuous deployment</li>
+                <li>24/7 Email support</li>
+            </ul>
+            <button class="contact-us">Contact Us</button>
+        </div>
+    </section>
+</body>
+</html>
